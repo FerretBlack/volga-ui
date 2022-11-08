@@ -1,3 +1,3 @@
 import Vue from 'vue'
 
-export { default as VolgaButton } from './components/VolgaButton/VolgaButton.vue'
+export { default as VButton } from './components/VButton/VButton.vue'
