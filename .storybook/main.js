@@ -1,3 +1,5 @@
+const { mergeConfig } = require('vite');
+
 module.exports = {
   "stories": [
     "../src/**/*.stories.mdx",
@@ -14,5 +16,20 @@ module.exports = {
   },
   "features": {
     "storyStoreV7": true
-  }
+  },
+  async viteFinal(config) {
+    return mergeConfig(config, {
+      css: {
+        postcss: null,
+        preprocessorOptions: {
+          scss: {
+            additionalData: `
+                    @import "../src/scss/base.scss";
+                    @import "../src/scss/colors.scss";
+                  `,
+          },
+        },
+      },
+    });
+  },
 }

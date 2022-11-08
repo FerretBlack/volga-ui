@@ -5,7 +5,6 @@ import vue from '@vitejs/plugin-vue'
 import pkg from './package.json'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 
-
 const stylesSources = `
   @import "@/scss/base.scss";
   @import "@/scss/colors.scss";

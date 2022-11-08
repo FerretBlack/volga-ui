@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'VolgaButton',
+  name: 'VButton',
   props: {
     outlined: {
       type: Boolean,
