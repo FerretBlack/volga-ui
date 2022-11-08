@@ -1,29 +1,13 @@
 # volga-ui
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
+Установить пакет
 ```sh
-npm install
+npm install volga-ui
 ```
 
-### Compile and Hot-Reload for Development
-
+Импортировать компоненты по примеру: 
 ```sh
-npm run dev
+import { VolgaButton } from "volga-ui";
+import "volga-ui/dist/bundle.css";
 ```
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```

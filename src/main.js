@@ -1,6 +1,3 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import Vue from 'vue'
 
-import './assets/main.scss'
-
-createApp(App).mount('#app')
+export { default as VolgaButton } from './components/VolgaButton/VolgaButton.vue'

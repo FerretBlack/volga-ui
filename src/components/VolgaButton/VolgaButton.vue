@@ -1,13 +1,35 @@
 <template>
-  <button :class="[$style.button, { [$style['-outlined']]: outlined }]">
+  <button
+    :class="[
+      'button',
+      {
+        ['-outlined']: outlined,
+        ['-strong']: strong,
+        ['-full-width']: fullWidth,
+      },
+    ]"
+  >
     <slot></slot>
   </button>
 </template>
 
 <script>
 export default {
+  name: 'VolgaButton',
   props: {
     outlined: {
+      type: Boolean,
+      default: false,
+    },
+    strong: {
+      type: Boolean,
+      default: false,
+    },
+    size: {
+      type: String,
+      default: "medium",
+    },
+    fullWidth: {
       type: Boolean,
       default: false,
     },
@@ -17,7 +39,7 @@ export default {
 };
 </script>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 .button {
   padding: 14px 28px;
   font-size: 16px;
@@ -43,6 +65,10 @@ export default {
       color: white;
       opacity: 1;
     }
+  }
+
+  &.-strong {
+    border-radius: 0;
   }
 }
 </style>
