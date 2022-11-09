@@ -15,10 +15,28 @@ export const Default = (args, { argTypes = {} }) => {
   }
 }
 
-export const ButtonPrimaryOutlined = Default.bind({})
-ButtonPrimaryOutlined.args = {
-  variant: 'outlined'
-}
+export const ButtonOutlined = () => ({
+  components: { VButton },
+  template: '<VButton outlined> Тестовая кнопка </VButton>',
+});
+
+export const ButtonFullWidth = () => ({
+  components: { VButton },
+  template: '<VButton full-width> Тестовая кнопка </VButton>',
+});
+
+export const ButtonSize = () => ({
+  components: { VButton },
+  template: `<VButton size="large"> Большая кнопка </VButton> <br><br>
+             <VButton> Стандартная кнопка </VButton> <br><br>
+             <VButton size="small"> Маленькая кнопка </VButton> <br><br>
+             <VButton size="x-small"> Очень маленькая кнопка </VButton>`,
+});
+
+export const ButtonCustomColor = () => ({
+  components: { VButton },
+  template: `<VButton color="#FF7D7D"> Большая кнопка </VButton> <br><br>`,
+});
 
 
 export default {
